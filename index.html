@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="no-js scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <!-- kept your head as-is -->
@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link href="src/output.css" rel="stylesheet">
-    <title>The Study Hub</title>
-</head>
-<body class="overflow-x-hidden">
-<!--Top Card-->
-<div class="h-full bg-[#E9DDCF] pt-5 px-5 lg:px-8">
+    <!-- custom CSS moved to src/input.css (compiled to src/output.css) -->
+     <title>The Study Hub</title>
+ </head>
+ <body class="overflow-x-hidden">
+ <!--Top Card-->
+ <div class="h-full bg-[#E9DDCF] py-10 px-5 lg:px-8">
     <!--    Navbar-->
     <section id="navbar" class="max-w-7xl mx-auto">
         <div class="flex flex-row justify-between items-center">
@@ -39,53 +40,70 @@
         </div>
 
         <!-- HERO -->
-        <div class="mt-10 grid gap-y-6 items-center text-center lg:text-left lg:grid-cols-2 lg:gap-x-10">
+        <div class="mt-10 bg-white rounded-2xl p-6 sm:p-10 shadow-sm grid gap-y-6 items-center text-center lg:text-left lg:grid-cols-2 lg:gap-x-10">
+            <!-- Left / Text -->
             <div class="flex flex-col gap-y-5 items-center lg:items-start">
-                <h2 class="bg-gradient-to-r from-black to-green-950 bg-clip-text text-transparent text-4xl lg:text-6xl font-medium font-display leading-tight">
+                <h2 class="bg-clip-text text-transparent bg-gradient-to-r from-black to-green-950 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-display leading-tight max-w-3xl">
                     Supporting your path to academic success!
                 </h2>
-                <p class="font-display text-gray-800/80 px-10 lg:px-0 lg:text-lg max-w-2xl">
-                    Providing students with exceptional tutoring services tailored to their own individual needs.
-                </p>
-                <a href="#contact"
-                   class="bg-[#785E26] rounded-full w-fit px-4 lg:px-6 font-medium text-lg lg:text-xl text-white py-3 lg:py-4 mb-2 font-display transform hover:-translate-y-1 hover:opacity-80 duration-200">
-                    Contact Us
-                </a>
 
-                <div class="max-w-7xl mx-auto flex justify-center gap-x-2 lg:gap-x-4">
-                    <div class="bg-[#785E26] pt-3 font-medium rounded-t-2xl font-display text-white flex items-center justify-center w-[144.5px] sm:w-56 lg:w-72 h-20">
-                        Expert Tutors
+                <p class="font-display text-gray-800/80 mt-2 px-6 sm:px-10 lg:px-0 text-sm sm:text-base lg:text-lg max-w-2xl">
+                    Providing students with exceptional tutoring services tailored to their individual needs — practical, supportive, and results-driven.
+                </p>
+
+                <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-4">
+                    <a href="#contact" class="inline-flex items-center justify-center rounded-full bg-[#785E26] px-5 py-3 text-white text-base font-medium shadow hover:opacity-90 transform hover:-translate-y-0.5 transition">
+                        Contact Us
+                    </a>
+                    <a href="#services" class="inline-flex items-center justify-center rounded-full border border-[#E5DCCF] bg-white text-[#0f172a] px-4 py-2 text-sm font-medium shadow-sm hover:bg-[#fbfbfb] transition">
+                        View Services
+                    </a>
+                </div>
+
+                <!-- Feature chips (modern, compact) -->
+                <div class="mt-6 flex flex-wrap justify-center lg:justify-start gap-3">
+                    <div class="flex items-start gap-3 bg-white border border-[#f0eadf] rounded-xl px-4 py-3 shadow-sm max-w-xs">
+                        <div class="w-2 h-8 rounded-md bg-[#785E26] flex-shrink-0" aria-hidden="true"></div>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900">Expert Tutors</div>
+                            <div class="text-xs text-gray-500">One-on-one support</div>
+                        </div>
                     </div>
-                    <div class="bg-[#785E26] pt-3 font-medium rounded-t-2xl font-display text-white flex items-center justify-center w-[144.5px] sm:w-44 lg:w-56 h-20">
-                        Affordable Pricing
+
+                    <div class="flex items-start gap-3 bg-white border border-[#f0eadf] rounded-xl px-4 py-3 shadow-sm max-w-xs">
+                        <div class="w-2 h-8 rounded-md bg-[#785E26] flex-shrink-0" aria-hidden="true"></div>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900">Affordable Pricing</div>
+                            <div class="text-xs text-gray-500">Flexible plans</div>
+                        </div>
                     </div>
-                    <div class="bg-[#785E26] pt-3 font-medium rounded-t-2xl font-display text-white flex items-center justify-center w-[144.5px] sm:w-44 lg:w-56 h-20">
-                        Flexible Sessions
+
+                    <div class="flex items-start gap-3 bg-white border border-[#f0eadf] rounded-xl px-4 py-3 shadow-sm max-w-xs">
+                        <div class="w-2 h-8 rounded-md bg-[#785E26] flex-shrink-0" aria-hidden="true"></div>
+                        <div>
+                            <div class="text-sm font-semibold text-slate-900">Flexible Sessions</div>
+                            <div class="text-xs text-gray-500">Online or in-person</div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- keep right side empty (no new content) so text centers on mobile and aligns left on desktop -->
+
+            <!-- Right / Illustration (hidden on smaller screens) -->
+            <div class="hidden lg:flex items-center justify-center">
+                <div class="w-[420px] h-[300px] rounded-2xl overflow-hidden shadow-lg bg-white flex items-center justify-center">
+                    <img src="assets/img.png" alt="Students studying" class="w-full h-full object-cover">
+                </div>
+            </div>
         </div>
     </section>
 </div>
 
 <!--Bottom card-->
 <div class="h-full bg-white rounded-b-xl pb-10 px-5 lg:px-8">
-    <!--    3 Cards-->
-    <div class="max-w-7xl mx-auto flex justify-center gap-x-2 lg:gap-x-4">
-        <div class="bg-[#785E26] pb-3 px-4 font-medium rounded-b-2xl font-display text-gray-300/80 text-xs sm:text-sm flex items-center justify-center w-40 sm:w-56 lg:w-72 h-20">
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        </div>
-        <div class="bg-[#785E26] pb-3 px-4 font-medium rounded-b-2xl font-display text-gray-300/80 text-xs sm:text-sm flex items-center justify-center w-40 sm:w-56 lg:w-72 h-20">
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        </div>
-        <div class="bg-[#785E26] pb-3 px-4 font-medium rounded-b-2xl font-display text-gray-300/80 text-xs sm:text-sm flex items-center justify-center w-40 sm:w-56 lg:w-72 h-20">
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-        </div>
-    </div>
+
 
     <!--Services-->
-    <section class="mt-16 max-w-7xl mx-auto">
+    <section id="services" class="mt-16 max-w-7xl mx-auto">
         <h3 class="text-3xl lg:text-4xl font-medium font-sans tracking-tight">Services</h3>
 
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
@@ -141,7 +159,7 @@
                             <div class="text-2xl lg:text-3xl font-semibold text-[#785E26]">$50</div>
                         </div>
                     </div>
-                    <button class="mt-5 w-full rounded-xl bg-[#785E26] px-4 py-3 lg:px-5 lg:py-3.5 text-white font-medium transition hover:opacity-90 hover:-translate-y-0.5">
+                    <button class="mt-[45px] w-full rounded-xl bg-[#785E26] px-4 py-3 lg:px-5 lg:py-3.5 text-white font-medium transition hover:opacity-90 hover:-translate-y-0.5">
                         Reserve a spot
                     </button>
                 </div>
@@ -179,48 +197,78 @@
     </section>
 
     <div class="mt-16 max-w-7xl mx-auto">
-        <h3 class="text-3xl lg:text-4xl font-display font-medium mb-5">Testimonials</h3>
-        <div class="flex flex-col gap-y-4">
-            <div class="rounded-2xl bg-[#785E26] flex flex-col border p-5 lg:p-6 border-[#785E26]/20 shadow-sm">
-                <p class="font-display text-2xl lg:text-3xl font-bold text-white">Edwina Skamvougeras</p>
-                <p class="text-md font-display text-gray-400/80">Parent</p>
-                <p class="font-display text-white text-lg my-5">
-                    We’ve been so impressed with The Study Hub. My son used to feel anxious about maths and lacked confidence, but after just a few weeks of tutoring, the change has been incredible.
-                </p>
-                <p class="font-display text-gray-400/80 text-sm lg:text-base">"He’s now more motivated, his grades have improved, and he actually enjoys learning again. The tutor takes the time to explain concepts clearly and makes every session engaging. As a parent, it’s been such a relief to see him grow not only academically but also in confidence. I can’t recommend The Study Hub enough!"</p>
-            </div>
-
-            <div class="flex flex-col gap-y-4">
-                <div class="rounded-2xl text-right bg-[#785E26] flex flex-col border p-5 lg:p-6 border-[#785E26]/20 shadow-sm">
-                    <p class="font-display text-2xl lg:text-3xl font-bold text-white">Mary Revelas</p>
-                    <p class="text-md font-display text-gray-400/80">Parent</p>
-                    <p class="font-display text-white text-lg my-5">What I’ve loved most about The Study Hub is the constant communication.</p>
-                    <p class="font-display text-gray-400/80 text-sm lg:text-base">"I always know how my son is progressing because the tutor keeps me updated after sessions and throughout the term. It’s reassuring to see the effort being put into not just teaching him, but making sure we’re all on the same page. My son’s confidence and results have improved so much, and I feel involved in his learning journey every step of the way."</p>
+        <h3 class="text-3xl lg:text-4xl font-medium font-sans tracking-tight">Testimonials</h3>
+        <p class="text-sm text-gray-600 max-w-2xl">Trusted by students and parents — real results and meaningful progress.</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Testimonial Card 1 -->
+            <figure class="bg-white rounded-2xl p-6 border border-gray-100 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition testimonial-card">
+                <div class="flex items-start gap-4">
+                    <div class="flex-shrink-0">
+                        <img src="assets/study-hub-logo.png" alt="Edwina" class="h-12 w-12 rounded-full object-cover ring-1 ring-gray-100">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="text-lg font-semibold text-slate-900 font-display">Edwina Skamvougeras</h4>
+                            <span class="text-sm text-gray-500">Parent</span>
+                        </div>
+                        <blockquote class="mt-3 text-gray-700 text-sm font-display">“We’ve been so impressed with The Study Hub. My son used to feel anxious about maths and lacked confidence, but after just a few weeks of tutoring, the change has been incredible. He’s now more motivated, his grades have improved, and he actually enjoys learning again.”</blockquote>
+                    </div>
                 </div>
-            </div>
+                <figcaption class="mt-4 text-xs text-gray-400">"The tutor takes the time to explain concepts clearly and makes every session engaging. As a parent, it’s been such a relief to see him grow not only academically but also in confidence."</figcaption>
+            </figure>
 
-            <div class="flex flex-col gap-y-4">
-                <div class="rounded-2xl text-left bg-[#785E26] flex flex-col border p-5 lg:p-6 border-[#785E26]/20 shadow-sm">
-                    <p class="font-display text-2xl lg:text-3xl font-bold text-white">Shirley Read</p>
-                    <p class="text-md font-display text-gray-400/80">Parent</p>
-                    <p class="font-display text-white text-lg my-5">The Study Hub has been a game changer for my Son.</p>
-                    <p class="font-display text-gray-400/80 text-sm lg:text-base">"He always worked hard but struggled to see results, which left him feeling frustrated. Since starting tutoring, he's gained a clear understanding of his subjects and has gone from barely passing to achieving top marks in his recent assessments. What I appreciate most is the encouragement and patience shown, it’s made him more confident and willing to take on challenges. The improvement has been remarkable."</p>
+            <!-- Testimonial Card 2 -->
+            <figure class="bg-white rounded-2xl p-6 border border-gray-100 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition testimonial-card">
+                <div class="flex items-start gap-4">
+                    <img src="assets/icons8-study-50.png" alt="Mary" class="h-12 w-12 rounded-full object-cover ring-1 ring-gray-100">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="text-lg font-semibold text-slate-900 font-display">Mary Revelas</h4>
+                            <span class="text-sm text-gray-500">Parent</span>
+                        </div>
+                        <blockquote class="mt-3 text-gray-700 text-sm font-display">“What I’ve loved most about The Study Hub is the constant communication. I always know how my son is progressing because the tutor keeps me updated after sessions and throughout the term.”</blockquote>
+                    </div>
                 </div>
-            </div>
+                <figcaption class="mt-4 text-xs text-gray-400">"It’s reassuring to see the effort being put into not just teaching him, but making sure we’re all on the same page. My son’s confidence and results have improved so much."</figcaption>
+            </figure>
+
+            <!-- Testimonial Card 3 -->
+            <figure class="bg-white rounded-2xl p-6 border border-gray-100 shadow-md hover:shadow-lg transform hover:-translate-y-1 transition testimonial-card">
+                <div class="flex items-start gap-4">
+                    <img src="assets/icons8-menu-50.png" alt="Shirley" class="h-12 w-12 rounded-full object-cover ring-1 ring-gray-100">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2">
+                            <h4 class="text-lg font-semibold text-slate-900 font-display">Shirley Read</h4>
+                            <span class="text-sm text-gray-500">Parent</span>
+                        </div>
+                        <blockquote class="mt-3 text-gray-700 text-sm font-display">“The Study Hub has been a game changer for my son. Since starting tutoring, he's gained a clear understanding of his subjects and has gone from barely passing to achieving top marks in his recent assessments."</blockquote>
+                    </div>
+                </div>
+                <figcaption class="mt-4 text-xs text-gray-400">"What I appreciate most is the encouragement and patience shown — it’s made him more confident and willing to take on challenges."</figcaption>
+            </figure>
         </div>
     </div>
 
     <!--Mission-->
-    <div class="mt-16 max-w-7xl mx-auto flex flex-col gap-y-4">
-        <h3 class="text-3xl lg:text-4xl font-display font-medium">Our Mission</h3>
-        <p class="font-display lg:text-lg max-w-4xl">
-            The Study Hub is committed to delivering premium tutoring experiences to all students.
-            Our passionate tutors bring expertise and enthusiasm, ensuring a deep understanding of subjects and building
-            confidence and interdependence. We believe learning should not only improve grades but also build
-            curiosity, resilience and a love for learning . Our team of expert tutors combines academic excellence with
-            genuine care, tailoring each session to suit individual needs. With a strong focus on one-on-one support,
-            engaging resources, and proven strategies, we create a learning environment where students thrive.
-        </p>
+    <div class="mt-16 max-w-7xl mx-auto">
+        <div class="mission-card lg:p-8 p-6">
+            <div class="mission-header">
+                <div class="mission-accent" aria-hidden="true"></div>
+                <h3 class="mission-title text-2xl lg:text-3xl font-display font-medium">Our Mission</h3>
+            </div>
+            <div class="mission-content mt-4" id="missionContent" aria-expanded="false">
+                <p class="font-display lg:text-lg max-w-4xl">
+                    The Study Hub is committed to delivering premium tutoring experiences to all students.
+                    Our passionate tutors bring expertise and enthusiasm, ensuring a deep understanding of subjects and building
+                    confidence and interdependence. We believe learning should not only improve grades but also build
+                    curiosity, resilience and a love for learning. Our team of expert tutors combines academic excellence with
+                    genuine care, tailoring each session to suit individual needs. With a strong focus on one-on-one support,
+                    engaging resources, and proven strategies, we create a learning environment where students thrive.
+                </p>
+                <div class="mission-fade" id="missionFade"></div>
+            </div>
+            <button class="read-more-btn" id="missionToggle" aria-controls="missionContent" aria-expanded="false">Read more</button>
+        </div>
     </div>
 
     <!-- CONTACT -->
@@ -260,7 +308,7 @@
                         <div>Coogee NSW, Australia</div>
                     </address>
                     <div class="space-y-2">
-                        <a href="mailto:Jordanudler10@gmail.com" class="block hover:opacity-80 transition">Jordanudler10@gmail.com</a>
+                        <a href="mailto:jordanudler10@gmail.com" class="block hover:opacity-80 transition">jordanudler10@gmail.com</a>
                         <a href="tel:+61476151555" class="block hover:opacity-80 transition">0476151555</a>
                     </div>
                 </div>
@@ -274,6 +322,47 @@
 
     <script>
         document.getElementById('contact-year').textContent = new Date().getFullYear();
+
+        // Mission read-more toggle & auto-hide when not needed
+        (function(){
+            const btn = document.getElementById('missionToggle');
+            const content = document.getElementById('missionContent');
+            const fade = document.getElementById('missionFade');
+            if(!content) return;
+
+            const updateUI = () => {
+                const isOverflowing = content.scrollHeight > content.clientHeight + 1; // small tolerance
+                if(!btn) return;
+                if(isOverflowing){
+                    btn.style.display = 'inline-block';
+                    const isExpanded = content.getAttribute('aria-expanded') === 'true';
+                    if(fade) fade.style.display = isExpanded ? 'none' : 'block';
+                } else {
+                    // content fits: hide controls and show full content
+                    btn.style.display = 'none';
+                    if(fade) fade.style.display = 'none';
+                    content.setAttribute('aria-expanded','true');
+                }
+            };
+
+            if(btn){
+                btn.addEventListener('click', function(){
+                    const expanded = content.getAttribute('aria-expanded') === 'true';
+                    const next = !expanded;
+                    content.setAttribute('aria-expanded', next ? 'true' : 'false');
+                    btn.setAttribute('aria-expanded', next ? 'true' : 'false');
+                    btn.textContent = next ? 'Show less' : 'Read more';
+                    if(fade) fade.style.display = next ? 'none' : 'block';
+                });
+            }
+
+            // initial check and on resize
+            updateUI();
+            window.addEventListener('resize', updateUI);
+
+            // If JS disabled, show full content by removing limitations
+            document.documentElement.classList.remove('no-js');
+        })();
     </script>
 </div>
 </body>
